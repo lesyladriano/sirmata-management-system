@@ -1,0 +1,20 @@
+/* In your CSS or component's styles */
+.custom-carousel-arrow-left,
+.custom-carousel-arrow-right {
+    position: absolute;
+    bottom: 20px;
+    z-index: 1;
+    background: transparent;
+    border: none;
+    font-size: 18px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.custom-carousel-arrow-left {
+    right: 70px; /* Adjust the distance from the right side */
+}
+
+.custom-carousel-arrow-right {
+    right: 20px;
+}

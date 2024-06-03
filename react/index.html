@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="csrf-token" content="{{ csrf_token() }}" />
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+            http-equiv="Content-Security-Policy"
+            content="upgrade-insecure-requests"
+        />
+
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Sirmata Ecofarm and Nature Park</title>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Courgette&family=Poppins:wght@300&family=Tenor+Sans&family=Ysabeau+Office&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            rel="icon"
+            type="image/x-icon"
+            href="https://res.cloudinary.com/di0nkj5kz/image/upload/v1712192032/Sirmata%20Images/icons/favicon-16x16_ao2i00.png"
+        />
+        <link
+            rel="apple-touch-icon"
+            href="https://res.cloudinary.com/di0nkj5kz/image/upload/v1712192029/Sirmata%20Images/icons/apple-touch-icon_gdi3lo.png"
+        />
+        <link
+            rel="android-chrome"
+            href="https://res.cloudinary.com/di0nkj5kz/image/upload/v1712192029/Sirmata%20Images/icons/android-chrome-512x512_tuwnlo.png"
+        />
+        <meta
+            name="description"
+            content="Welcome and get lost in nature’s magic at Sirmata Ecofarm and Nature Park! Sirmata is an ideal destination for families who want to spend time outdoors, explore nature, make memories, and unwind!"
+        />
+    </head>
+    <body>
+        <div id="root"></div>
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <script>
+            // Add default headers for Axios
+            window.axios.defaults.headers.common = {
+                "X-Requested-With": "XMLHttpRequest",
+                "X-CSRF-TOKEN": document
+                    .querySelector('meta[name="csrf-token"]')
+                    .getAttribute("content"),
+            };
+        </script>
+        <script type="module" src="/src/main.jsx"></script>
+    </body>
+</html>

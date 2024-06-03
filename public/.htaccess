@@ -1,0 +1,55 @@
+<IfModule mod_rewrite.c>
+<IfModule mod_headers.c>
+    Header set Access-Control-Allow-Origin "http://localhost:3000/"
+    Header set Access-Control-Allow-Methods "GET, POST, PUT, DELETE, OPTIONS"
+    Header set Access-Control-Allow-Headers "Content-Type, Authorization"
+</IfModule>
+
+
+    <IfModule mod_negotiation.c>
+        Options -MultiViews
+    </IfModule>
+
+    # Handle Authorization Header
+    RewriteEngine On
+    RewriteCond %{HTTP:Authorization} ^(.+)$
+    RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+
+
+  # Force HTTPS for sirmatafarm.com
+  RewriteCond %{HTTPS} off
+  RewriteCond %{HTTP_HOST} ^sirmatafarm\.com$ [NC]
+  RewriteRule ^(.*)$ https://sirmatafarm.com/$1 [R=301,L]
+
+
+    # Force HTTPS for api.sirmatafarm.com
+    RewriteCond %{HTTPS} off
+    RewriteCond %{HTTP_HOST} ^api\.sirmatafarm\.com$ [NC]
+    RewriteRule ^(.*)$ https://api.sirmatafarm.com/$1 [R=301,L]
+
+    
+    # CORS Headers
+    Header always set Access-Control-Allow-Origin "https://sirmatafarm.com"    
+    Header always set Access-Control-Allow-Headers "X-Custom-Header,X-Powered-By,Content-Type, Authorization"
+    Header always set Access-Control-Allow-Methods "GET,POST,PUT,DELETE,OPTIONS"
+    Header always set Access-Control-Expose-Headers "*"
+    Header always set Access-Control-Allow-Credentials "true"
+
+    RewriteEngine On
+
+    # Redirect Trailing Slashes...
+    RewriteRule ^(.*)/$ /$1 [L,R=301]
+
+    RewriteBase /
+ 
+    RewriteCond %{SERVER_PORT} !=443
+    RewriteRule ^(.*)$ https://api.sirmatafarm.com/$1 [R=301,L]
+
+
+    # Handle Front Controller...
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^ index.php [L]
+
+    
+</IfModule>

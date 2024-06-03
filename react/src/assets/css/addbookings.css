@@ -1,0 +1,131 @@
+.addbookings-calendar-design {
+  
+    background: rgb(255, 255, 255);
+    border-radius: 10px;
+    border: 1px solid rgb(209 213 219);
+    font-family: Manrope, Helvetica, sans-serif;
+    padding:.7rem .5rem;  
+    }
+
+.addbookings-calendar-container{
+  width:400px;
+  display: flex;
+  justify-content: center;
+  background-color: rgb(255, 255, 255,.4);
+  transition: .5s ease-in-out;
+
+}
+
+.cabin-card {
+    background-color: #FFF;
+    border-radius: 0.5rem;
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.1);
+    padding: 1.25rem 1.5rem;
+    overflow: auto;
+    scrollbar-width: thin; 
+    scrollbar-color: rgb(0, 0, 0) #2e2e2e;
+}
+
+.accommodation-thumbnail-add{
+    height: 100%;
+    width: 500px;
+}
+.marked-date-range {
+  background: red;
+  transition: 0.3s ease-in-out;
+  color: white;
+  pointer-events: none; /* Disable interaction for marked tiles */
+}
+
+.accommodation-scheduled-for {
+    background: red;
+    transition: .3s ease-in-out;
+    color: white;
+  }
+  
+  .card2 {
+    border-radius: 0.5rem;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+    padding: 1.25rem 1.5rem;
+    scrollbar-width: thin;
+    scrollbar-color: rgb(0, 0, 0) #2e2e2e;
+}
+.card3 {
+    border-radius: 0.5rem;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.selected-accommodation{
+    width: 25rem;
+}
+
+.edit-reservatiom-modal{
+    background-color: white;
+    border-radius: 6px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, .6);
+    padding:.3rem;
+    padding-top: .4rem;
+    padding-bottom: 2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    overflow: auto;
+    scrollbar-width: thin; /* "auto" or "thin" (for slim scrollbar) */
+    scrollbar-color: rgb(0, 0, 0) #2e2e2e;
+  }
+  
+  .edit-reservation-base{
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    display: none;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.223);
+  }
+
+  .input-bookings{
+    font-size:13px;
+    height:2rem;
+    border-radius: 4px;
+    width:100%;
+    padding:1rem;
+  }
+  
+  .input-bookings-dis{
+    font-size:16px;
+    height:2rem;
+    border-radius: 4px;
+    width:100%;
+    padding:1rem;
+  }
+
+  .input-bookings-textarea{
+    font-size:13px;
+    height:3rem;
+    border-radius: 4px;
+    width:100%;
+    padding:1rem;
+    overflow: auto;
+
+  }
+
+  .search-bar-admin{
+    height: 0px;
+    width: 180px;
+    font-size: 15px;
+    font-family: "Poppins", sans-serif; 
+    outline: none;
+    height: fit;
+  }
+
+  .parent-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+.option-custom-height {
+  height: 100px; 
+}

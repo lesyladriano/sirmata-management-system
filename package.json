@@ -1,0 +1,31 @@
+{
+    "private": true,
+    "type": "module",
+    "scripts": {
+        "dev": "vite",
+        "build": "vite build"
+    },
+    "devDependencies": {
+        "laravel-vite-plugin": "^0.7.5"
+    },
+    "dependencies": {
+        "@fortawesome/fontawesome-svg-core": "^6.4.0",
+        "@fortawesome/free-solid-svg-icons": "^6.4.0",
+        "@fortawesome/react-fontawesome": "^0.2.0",
+        "@headlessui/react": "^1.7.15",
+        "axios": "^1.4.0",
+        "cloudinary-react": "^1.8.1",
+        "cors": "^2.8.5",
+        "express": "^4.18.2",
+        "react-big-calendar": "^1.11.2",
+        "react-calendar": "^4.3.0",
+        "react-datepicker": "^4.16.0",
+        "react-icons": "^5.0.1",
+        "react-paginate": "^8.2.0",
+        "react-responsive-carousel": "^3.2.23",
+        "react-slick": "^0.29.0",
+        "slick-carousel": "^1.8.1",
+        "sweetalert2": "^11.6.13",
+        "swiper": "^9.4.1"
+    }
+}

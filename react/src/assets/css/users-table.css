@@ -1,0 +1,55 @@
+su.users-display{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card {
+    background-color: #FFF;
+    border-radius: 0.5rem;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+    padding: 1.25rem 1.5rem;
+    margin-bottom: 1rem;
+    margin-top: 0.5rem;
+}
+
+
+
+table {
+    width: 100%;
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
+table > thead > tr > th {
+    text-align: left;
+    padding: 0.5rem 0.5rem;
+    background-color: #efefef;
+}
+
+table > tbody > tr > td {
+    padding: 1rem;
+    border-bottom: 1px solid #efefef;
+    white-space: nowrap;
+}
+
+.name-container {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .input-users{
+    font-size:13px;
+    height:2rem;
+    border-radius: 4px;
+    width:100%;
+    padding:1rem;
+    color:black !important;
+  }
+
+  .input-disabled {
+    color: #aaa; /* Change this color to match your design */
+  }
+  .input-radio{
+    width: 10px !important;;
+  }
